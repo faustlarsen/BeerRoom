@@ -12,7 +12,8 @@ function Beer(props) {
         <h3>Quantity: {props.quantity}</h3>
       </div>
     </React.Fragment>
-  )}
+  )
+}
 
 Beer.propTypes = {
   name: PropTypes.string,
