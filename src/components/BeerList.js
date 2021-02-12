@@ -7,13 +7,13 @@ function BeerList(props) {
     <React.Fragment>
       {props.beerList.map((beer) =>
         <Beer 
-        whenBeerClicked = {props.onBeerSelection} 
-        name={beer.name}
-        brand={beer.brand}
-        flavor={beer.flavor}
-        price={beer.price}
-        quantity={beer.quantity}
-        id={beer.id} />
+          whenBeerClicked = {props.onBeerSelection} 
+          name={beer.name}
+          brand={beer.brand}
+          flavor={beer.flavor}
+          price={beer.price}
+          quantity={beer.quantity}
+          id={beer.id} />
       )}
     </React.Fragment>
   )
