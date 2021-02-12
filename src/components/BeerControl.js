@@ -5,7 +5,6 @@ import BeerDetails from "./BeerDetails";
 import EditBeerForm from './EditBeerForm';
 
 class BeerControl extends React.Component {
-
   constructor(props) {
     super(props);
     this.state = {
@@ -17,19 +16,19 @@ class BeerControl extends React.Component {
     };
   }
 
-  showFormOnClick = () => { 
-    if (this.state.selectedBeer != null) {
-      this.setState({
-        formVisibleOnPage: false,
-        selectedBeer: null,
-        editing: false
-      });
-    } else {
-      this.setState(prevState => ({
-        formVisibleOnPage: !prevState.formVisibleOnPage
-      }));
-    }
+showFormOnClick = () => { 
+  if (this.state.selectedBeer != null) {
+    this.setState({
+      formVisibleOnPage: false,
+      selectedBeer: null,
+      editing: false
+    });
+  } else {
+    this.setState(prevState => ({
+      formVisibleOnPage: !prevState.formVisibleOnPage
+    }));
   }
+}
 
 //create
 handleAddingNewBeerToList = (newBeer) => {
@@ -62,12 +61,27 @@ handleEditingBeerInList = (beerToEdit) => {
   });
 }
 
-
-// delete
+//delete
 handleDeletingBeer = (id) => {
   const newMasterBeerList = this.state.masterBeerList.filter(beer => beer.id !== id);
   this.setState({
     masterBeerList: newMasterBeerList,
+    selectedBeer: null
+  });
+}
+
+//buy
+handleBuyClick = (id) => {
+  const beerToBuy = this.state.masterBeerList.filter(
+  beer => beer.id === this.state.selectedBeer.id)[0];
+  if (beerToBuy.keg !== 0) {
+    beerToBuy.keg--;
+  }
+  const editedBeerList = this.state.masterBeerList
+    .filter(beer => beer.id !==id);
+  this.setState({
+    masterBeerList: editedBeerList,
+    editing: false,
     selectedBeer: null
   });
 }
@@ -83,18 +97,21 @@ render(){
       } />
     buttonText = "Beer List";
   } 
+
   else if (this.state.selectedBeer != null) {
       currentlyVisibleState =
       <BeerDetails
         beer = {this.state.selectedBeer}
         onClickingDelete = {this.handleDeletingBeer}
+        onClickingBuy = {this.handleBuyClick}
         onClickingUpdate = {this.handleEditClick} />;
         buttonText = "Beer List";
     } 
     else if (this.state.formVisibleOnPage) { 
       currentlyVisibleState = <NewBeerForm 
       onNewBeerCreation = {this.handleAddingNewBeerToList} />;
-      buttonText = "Beer List"; 
+      buttonText = "Beer List";
+      
     } else { 
       currentlyVisibleState = <BeerList beerList={this.state.masterBeerList} onBeerSelection={this.handleChangingSelectedBeer} />;
       buttonText = "Add Beer";

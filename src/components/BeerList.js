@@ -8,11 +8,10 @@ function BeerList(props) {
       {props.beerList.map((beer) =>
         <Beer 
           whenBeerClicked = {props.onBeerSelection} 
-          name={beer.name}
           brand={beer.brand}
-          flavor={beer.flavor}
+          alcoholContent={beer.alcoholContent}
           price={beer.price}
-          quantity={beer.quantity}
+          keg={beer.keg}
           id={beer.id} />
       )}
     </React.Fragment>

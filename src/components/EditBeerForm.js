@@ -8,11 +8,10 @@ function EditBeerForm (props) {
   function handleEditBeerFormSubmission(event) {
     event.preventDefault();
     props.onEditBeer({
-      name: event.target.name.value,
       brand: event.target.brand.value,
-      flavor: event.target.flavor.value,
+      alcoholContent: event.target.alcoholContent.value,
       price: event.target.price.value,
-      quantity: event.target.quantity.value,
+      keg: beer.keg,
       id: beer.id});
   }
 
@@ -20,7 +19,7 @@ function EditBeerForm (props) {
     <React.Fragment>
       <ReusableForm
         formSubmissionHandler={handleEditBeerFormSubmission}
-        buttonText="UPDATE" />
+        buttonText="Update" />
     </React.Fragment>
   );
 }

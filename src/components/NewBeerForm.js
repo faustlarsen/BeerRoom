@@ -7,11 +7,10 @@ function NewBeerForm(props) {
   function handleNewBeerFormSubmission(event) {
     event.preventDefault();
     props.onNewBeerCreation ({
-      name: event.target.name.value,
       brand: event.target.brand.value,
-      flavor: event.target.flavor.value,
+      alcoholContent: event.target.alcoholContent.value,
       price: event.target.price.value,
-      quantity: event.target.quantity.value,
+      keg: 124,
       id: v4()
     });
   };
