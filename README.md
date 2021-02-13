@@ -1,12 +1,7 @@
 
 ![Preview](beer.png)
 
-
-This is an MVC web app that allows to keep track of machines and engeneers. 1/8/2021
-By Constantine Yakubovski
-
-
-# BeerRooM
+## BeerRooM
 
 #### _This a first React independent project. 02/12/2021_
 
@@ -32,18 +27,18 @@ _A web app that allows a bar to keep track of pints of beer. There were used fun
 
 * Clone this repository using the command `https://github.com/faustlarsen/beer-room.git`
 
-*  `cd beer-room` to get into main directory
+* `cd beer-room` to get into main directory
 
-*  `npm install` to install dependencies
+* `npm install` to install dependencies
 
 * `npm run start` to view the site
 
 ## Technologies Used
 
-HTML  
-CSS  
-React 
-JavaScript
+* HTML  
+* CSS  
+* React 
+* JavaScript
 
 License
 This software is licensed under the MIT license

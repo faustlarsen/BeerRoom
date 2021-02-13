@@ -13,6 +13,7 @@ function BeerDetails(props) {
     {beer.keg === 0 ?
       <h3>Out of Stock</h3> : <h3>Pints left: {beer.keg}</h3>
     }
+  
     {beer.keg > 0 ? <button onClick={props.onClickingBuy}>Buy</button> : null}
     <button onClick={() => onClickingDelete(beer.id)}>Delete</button>
     <button onClick={props.onClickingUpdate}>Update</button>

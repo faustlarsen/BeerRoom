@@ -10,7 +10,7 @@ function NewBeerForm(props) {
       brand: event.target.brand.value,
       alcoholContent: event.target.alcoholContent.value,
       price: event.target.price.value,
-      keg: 124,
+      keg: 12,
       id: v4()
     });
   };
