@@ -1,7 +1,56 @@
+
 ![Preview](beer.png)
 
 
-# Getting Started with Create React App
+This is an MVC web app that allows to keep track of machines and engeneers. 1/8/2021
+By Constantine Yakubovski
+
+
+# BeerRooM
+
+#### _This a first React independent project. 02/12/2021_
+
+####  By  _**Constantine Yakubovski**_
+
+## Description
+
+_A web app that allows a bar to keep track of pints of beer. There were used functional and class compontents, local and shared state, props and PropTypes._
+
+
+### SPECS:
+
+* As a user, I want to see a list of all available kegs
+* As a user, I want to be able to delete a keg
+* As a user, I want add a new keg to a list.
+* As a user, I want to be able to click on a keg to see its detail page
+* As a user, I want to see how many pints are left in a keg
+* As a user, I want to be able to click a button next to a keg whenever I sell a pint of it to decrease the number of pints
+* As a user, I want a keg to update to say "Out of Stock" once it's empty.
+    
+
+## Setup/Installation Requirements
+
+* Clone this repository using the command `https://github.com/faustlarsen/beer-room.git`
+
+*  `cd beer-room` to get into main directory
+
+*  `npm install` to install dependencies
+
+* `npm run start` to view the site
+
+## Technologies Used
+
+HTML  
+CSS  
+React 
+JavaScript
+
+License
+This software is licensed under the MIT license
+
+Copyright (c) 2020 Constantine Yakubovski
+
+## Legal
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

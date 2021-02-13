@@ -82,7 +82,7 @@ handleBuyClick = (id) => {
   this.setState({
     masterBeerList: editedBeerList,
     editing: false,
-    selectedBeer: null
+
   });
 }
 

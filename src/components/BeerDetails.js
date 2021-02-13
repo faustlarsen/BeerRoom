@@ -24,7 +24,7 @@ BeerDetails.protoTypes = {
   beer: PropTypes.object,
   onClickingDelete: PropTypes.func,
   onClickingUpdate: PropTypes.func,
-  onClickingBuy: PropTypes.func
+  onClickingBuy: PropTypes.func,
 }
 
 export default BeerDetails;
