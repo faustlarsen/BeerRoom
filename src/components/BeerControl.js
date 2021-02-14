@@ -3,6 +3,7 @@ import BeerList from "./BeerList";
 import NewBeerForm from "./NewBeerForm";
 import BeerDetails from "./BeerDetails";
 import EditBeerForm from './EditBeerForm';
+// import Button from "react-bootstrap/Button";
 
 class BeerControl extends React.Component {
   constructor(props) {
@@ -114,7 +115,7 @@ render(){
       
     } else { 
       currentlyVisibleState = <BeerList beerList={this.state.masterBeerList} onBeerSelection={this.handleChangingSelectedBeer} />;
-      buttonText = "Add Beer";
+     buttonText = "Add Beer";
     }
     return (
       <React.Fragment>

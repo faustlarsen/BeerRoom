@@ -9,19 +9,18 @@ function BeerDetails(props) {
     <div className="card p-4 w-50 mx-auto" >
       <h1 style={{color: '#010104'}}>Details</h1>
       <h5 style={{color: '#010104'}}>Brand: {beer.brand}</h5>
-      <h5 style={{color: '#010104'}}>Alcohol Content: {beer.alcoholContent}</h5>
-      <h5 style={{color: '#010104'}}>Price: {beer.price}</h5>
+      <h5 style={{color: '#010104'}}>Alcohol Content: {beer.alcoholContent}%</h5>
+      <h5 style={{color: '#010104'}}>Price: ${beer.price}</h5>
    
-
-
     {beer.keg === 0 ?
-      <h5 style={{color: '#010104'}}>Out of Stock</h5> : <h5 style={{color: '#010104'}}>Pints left: {beer.keg}</h5>
+      <h5 style={{color: '#010104'}}>Out of Stock</h5> : 
+      <h5 style={{color: '#010104'}}>Pints left: {beer.keg}</h5>
     }
-       </div>
-     <div className="card-footer">
-    {beer.keg > 0 ? <button onClick={props.onClickingBuy}>Buy</button> : null}
-    <button onClick={() => onClickingDelete(beer.id)}>Delete</button>
-    <button onClick={props.onClickingUpdate}>Update</button>
+    </div>
+    <div className="card-footer">
+      {beer.keg > 0 ? <button class="btn btn-secondary"  onClick={props.onClickingBuy}>Buy</button> : null}
+      <button  class="btn btn-secondary" onClick={() => onClickingDelete(beer.id)}>Delete</button>
+      <button class="btn btn-secondary"  onClick={props.onClickingUpdate}>Update</button>
     </div>
   </React.Fragment>
   );
