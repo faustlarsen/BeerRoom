@@ -37,6 +37,7 @@ _A web app that allows a bar to keep track of pints of beer. There were used fun
 
 * HTML  
 * CSS  
+* React-Bootstrap
 * React 
 * JavaScript
 

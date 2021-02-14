@@ -1,12 +1,16 @@
 import React from "react";
+// import Navbar from "react-bootstrap/Navbar";
 
 function Header() {
   return (
     <React.Fragment>
-      <h3>BeerRrooM</h3>
-      <h5>There is nothing like the first sip</h5>
+      <div>
+        <h1 className=" text-white">BeeЯooM</h1>
+      </div>
     </React.Fragment>
   )
 }
 
 export default Header;
+
+

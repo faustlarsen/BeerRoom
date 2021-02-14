@@ -17,10 +17,13 @@ function NewBeerForm(props) {
 
   return(
     <React.Fragment>
+      <div className="card  p-4 w-50 mx-auto" >
       <ReusableForm
         formSubmissionHandler={handleNewBeerFormSubmission}
         buttonText="Submit" />
+     </div>
     </React.Fragment>
+
   );
 }
 
