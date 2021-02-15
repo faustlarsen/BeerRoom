@@ -6,6 +6,11 @@ function ReusableForm(props) {
     <React.Fragment>
       <div className="card  p-4 w-50 mx-auto" >
         <form onSubmit={props.formSubmissionHandler} >
+        <input class="form-control"
+            type='text'
+            name='name'
+            placeholder='Name' 
+            required/>
           <input class="form-control"
             type='text'
             name='brand'

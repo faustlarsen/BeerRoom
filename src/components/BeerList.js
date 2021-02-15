@@ -12,10 +12,11 @@ function BeerList(props) {
             <div className = "card shadow-lg text-canter">
               <Beer 
                 whenBeerClicked = {props.onBeerSelection} 
+                name={beer.name}
                 brand={beer.brand}
                 alcoholContent={beer.alcoholContent}
                 price={beer.price}
-                keg={parseInt(beer.keg)}
+                keg={beer.keg}
                 id={beer.id} 
               />
             </div>

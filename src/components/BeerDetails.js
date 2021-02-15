@@ -8,6 +8,7 @@ function BeerDetails(props) {
   <React.Fragment>
     <div className="card p-4 w-50 mx-auto" >
       <h1 style={{color: '#010104'}}>Details</h1>
+      <h5 style={{color: '#010104'}}>Name: {beer.name}</h5>
       <h5 style={{color: '#010104'}}>Brand: {beer.brand}</h5>
       <h5 style={{color: '#010104'}}>Alcohol Content: {beer.alcoholContent}%</h5>
       <h5 style={{color: '#010104'}}>Price: ${beer.price}</h5>
