@@ -9,8 +9,8 @@ function NewBeerForm(props) {
     props.onNewBeerCreation ({
       name: event.target.name.value,
       brand: event.target.brand.value,
-      alcoholContent: event.target.alcoholContent.value,
-      price: event.target.price.value,
+      alcoholContent: parseInt(event.target.alcoholContent.value),
+      price:  parseInt(event.target.price.value),
       keg: 124,
       id: v4()
     });

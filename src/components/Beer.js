@@ -17,7 +17,6 @@ function Beer(props) {
 
 Beer.propTypes = {
   brand: PropTypes.string.isRequired,
-  alcoholContent: PropTypes.number.isRequired,
   price: PropTypes.number.isRequired,
   keg: PropTypes.number,
   id: PropTypes.string,
